@@ -4,7 +4,7 @@
 [![Documentation Status](https://readthedocs.org/projects/xfin-xai/badge/?version=latest)](https://xfin-xai.readthedocs.io/en/latest/?badge=latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-XFIN-XAI is an open-source Python library designed for privacy-preserving explainable AI (XAI) in financial services. It enables banks and financial institutions to generate transparent explanations for black-box models without exposing proprietary internals. The MVP focuses on credit risk explanations, adverse action notices, and counterfactual recommendations, ensuring compliance with regulations like GDPR and ECOA.
+XFIN-XAI is an open-source Python library designed for privacy-preserving explainable AI (XAI) in financial services and banking systems. It enables banks and financial institutions to generate transparent explanations for black-box models without exposing proprietary internals. The MVP focuses on credit risk explanations, adverse action notices, and counterfactual recommendations, ensuring compliance with regulations like GDPR and ECOA.
 
 This library is built for educational and research purposes, allowing users to explore XAI in finance while maintaining data privacy.
 
