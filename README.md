@@ -1,7 +1,7 @@
 # XFIN-XAI: Privacy-Preserving Explainable AI Library for Financial Services
 
 [![PyPI version](https://badge.fury.io/py/xfin-xai.svg)](https://badge.fury.io/py/xfin-xai)
-[![Tests](https://github.com/yourusername/xfin-xai/actions/workflows/tests.yml/badge.svg)](https://github.com/yourusername/xfin-xai/actions)
+[![Tests](https://github.com/dhruvparmar10/XFIN/actions/workflows/tests.yml/badge.svg)](https://github.com/dhruvparmar10/XFIN/actions)
 [![Documentation Status](https://readthedocs.org/projects/xfin-xai/badge/?version=latest)](https://xfin-xai.readthedocs.io/en/latest/?badge=latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -20,10 +20,10 @@ This library is built for educational and research purposes, allowing users to e
 
 ## Installation
 
-Install XFIN-XAI via pip:
+Install XFIN via pip:
 ```
 
-pip install xfin-xai
+pip install XFIN
 
 ```
 
@@ -31,8 +31,8 @@ For development installation, clone the repository and install dependencies:
 
 ```
 
-git clone https://github.com/yourusername/xfin-xai.git
-cd xfin-xai
+git clone https://github.com/dhruvparmar10/XFIN.git
+cd XFIN
 pip install -e .
 
 ```
@@ -40,7 +40,7 @@ pip install -e .
 ### Requirements
 
 - Python 3.8+
-- Dependencies: `pandas`, `numpy`, `shap`, `lime`, `joblib`, `matplotlib`, `google-generativeai` (for LLM features)
+- Dependencies: `pandas`, `numpy`, `shap`, `lime`, `joblib`, `matplotlib`,`streamlit`,(Open router for LLM features)
 
 See `requirements.txt` for the full list.
 
@@ -122,9 +122,8 @@ For bugs or feature requests, open an issue on GitHub.
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## Acknowledgments
-
-- Built with inspiration from SHAP, LIME, and Gemini APIs.
+- Major Thanks to Shap and Lime for building great tools.
 - Thanks to the open-source community for tools like setuptools and ReadTheDocs.
 
-For questions, contact [your.email@example.com] or open an issue.
+For questions, contact [dhruv.jparmar0@gmail.com] or open an issue.
 ```
