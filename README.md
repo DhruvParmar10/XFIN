@@ -1,7 +1,6 @@
 # XFIN-XAI: Privacy-Preserving Explainable AI Library for Financial Services
 
-[![PyPI version](https://badge.fury.io/py/xfin-xai.svg)](https://badge.fury.io/py/xfin-xai)
-[![Tests](https://github.com/dhruvparmar10/XFIN/actions/workflows/tests.yml/badge.svg)](https://github.com/dhruvparmar10/XFIN/actions)
+[![PyPI version](https://badge.fury.io/py/XFIN.svg)](https://badge.fury.io/py/XFIN)
 [![Documentation Status](https://readthedocs.org/projects/xfin-xai/badge/?version=latest)](https://xfin-xai.readthedocs.io/en/latest/?badge=latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
