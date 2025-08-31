@@ -21,7 +21,7 @@ This library is built for educational and research purposes, allowing users to e
 
 Install XFIN via pip:
 ```
-pip install XFIN
+pip install xfin-xai
 ```
 
 For development installation, clone the repository and install dependencies:
