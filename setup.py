@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name='xfin-xai',
     version='0.1.0',
-    author='Rishabh Bhangle & Dhruv Parmar',
+    author='Rishabh Bhangale & Dhruv Parmar',
     author_email='dhruv.jparmar0@gmail.com',  # Add your email if desired
     description='Privacy-Preserving Explainable AI Library for Financial Services',
     long_description=long_description,
