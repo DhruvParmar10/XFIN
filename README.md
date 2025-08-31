@@ -1,6 +1,6 @@
 # XFIN-XAI: Explainable AI Library for Financial Services and Banking Systems
 
-[![PyPI version](https://badge.fury.io/py/XFIN.svg)](https://badge.fury.io/py/XFIN)
+[![PyPI version](https://badge.fury.io/py/xfin-xai.svg)](https://badge.fury.io/py/xfin-xai)
 [![Documentation Status](https://readthedocs.org/projects/xfin-xai/badge/?version=latest)](https://xfin-xai.readthedocs.io/en/latest/?badge=latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
