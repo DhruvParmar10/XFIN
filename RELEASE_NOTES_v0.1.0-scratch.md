@@ -7,30 +7,35 @@
 ## 📦 What's New
 
 ### 🔒 Privacy-Preserving Architecture
+
 - **Black-box Model Interface**: Secure wrapper that only exposes `predict()` and `predict_proba()` methods
 - **Synthetic Data Generation**: Protects original training data during explanation generation
 - **Zero Model Exposure**: No access to model weights, parameters, or internal structures
 - **Configurable Compliance**: Built-in GDPR and ECOA compliance frameworks
 
 ### 🏦 Credit Risk Module
+
 - **Specialized Credit Assessment**: Domain-specific explainer for credit risk evaluation
 - **Dual Explainability**: Integrated SHAP and LIME analysis for comprehensive insights
 - **Top Feature Analysis**: Identifies and ranks the 3 most influential features
 - **Visual Explanations**: Publication-ready charts for both SHAP and LIME results
 
 ### ⚖️ Regulatory Compliance Engine
+
 - **Adverse Action Notices**: Automatic generation of ECOA-compliant rejection notices
 - **GDPR Article 22 Support**: Right to explanation for automated decision-making
 - **Audit Trail**: Complete logging and traceability for regulatory reviews
 - **Compliance Validation**: Built-in checks for regulatory requirement adherence
 
 ### 🤖 LLM-Enhanced Explanations
+
 - **Natural Language Processing**: Human-readable explanations via OpenRouter/Gemini API
 - **Context-Aware Responses**: Incorporates SHAP and LIME insights into narrative explanations
 - **Professional Formatting**: Customer-ready explanations with risk assessment context
 - **Multi-paragraph Structure**: Comprehensive analysis with actionable insights
 
 ### 🖥️ Interactive Streamlit Interface
+
 - **Dynamic Model Support**: Works with any scikit-learn compatible model
 - **Universal Dataset Compatibility**: Automatic feature detection and encoding
 - **Dual Input Methods**: Manual form input or dataset sample selection
@@ -40,10 +45,11 @@
 ## 🔧 Technical Specifications
 
 ### **Core Components**
+
 ```
 XFIN/
 ├── explainer.py          # Privacy-preserving base explainer
-├── credit_risk.py        # Credit risk specialized module  
+├── credit_risk.py        # Credit risk specialized module
 ├── compliance.py         # Regulatory compliance engine
 ├── utils.py              # LLM integration utilities
 ├── app.py                # Streamlit web interface
@@ -51,6 +57,7 @@ XFIN/
 ```
 
 ### **Dependencies**
+
 - **Core ML**: `shap`, `lime`, `numpy`, `pandas`, `matplotlib`
 - **Web Interface**: `streamlit`
 - **Model Support**: `scikit-learn` (any compatible model)
@@ -58,6 +65,7 @@ XFIN/
 - **Persistence**: `joblib`
 
 ### **Python Compatibility**
+
 - **Supported Versions**: Python 3.8, 3.9, 3.10, 3.11
 - **Operating Systems**: macOS, Linux, Windows
 - **Hardware Requirements**: Minimal (runs on commodity hardware)
@@ -65,24 +73,28 @@ XFIN/
 ## 🎯 Key Features
 
 ### **Privacy Protection**
+
 - ✅ Black-box model access only
 - ✅ Synthetic data generation for explanations
 - ✅ No original training data exposure
 - ✅ Configurable privacy levels
 
 ### **Explainability**
+
 - ✅ SHAP (SHapley Additive exPlanations) integration
 - ✅ LIME (Local Interpretable Model-agnostic Explanations) support
 - ✅ Feature importance ranking
 - ✅ Visual explanation charts
 
 ### **Regulatory Compliance**
+
 - ✅ GDPR Article 22 compliance (right to explanation)
 - ✅ ECOA adverse action notice generation
 - ✅ Audit trail and logging
 - ✅ Compliance validation framework
 
 ### **Production Readiness**
+
 - ✅ Modular architecture for easy extension
 - ✅ Error handling and fallback mechanisms
 - ✅ Performance optimization for real-time use
@@ -91,6 +103,7 @@ XFIN/
 ## 📊 Usage Examples
 
 ### **Basic Privacy-Preserving Explanation**
+
 ```python
 from XFIN import PrivacyPreservingExplainer
 
@@ -98,15 +111,15 @@ from XFIN import PrivacyPreservingExplainer
 class ModelWrapper:
     def __init__(self, model):
         self.model = model
-    def predict(self, X): 
+    def predict(self, X):
         return self.model.predict(X)
-    def predict_proba(self, X): 
+    def predict_proba(self, X):
         return self.model.predict_proba(X)
 
 # Create explainer with compliance settings
 explainer = PrivacyPreservingExplainer(
-    ModelWrapper(your_model), 
-    domain="credit_risk", 
+    ModelWrapper(your_model),
+    domain="credit_risk",
     compliance_level="GDPR_ECOA"
 )
 
@@ -115,6 +128,7 @@ explanation = explainer.explain_prediction(sample_data)
 ```
 
 ### **Credit Risk Assessment**
+
 ```python
 from XFIN import CreditRiskModule
 
@@ -133,6 +147,7 @@ if explanation['prediction'] == 0:  # Rejected
 ```
 
 ### **Streamlit Web Interface**
+
 ```python
 from XFIN import launch_streamlit_app
 
@@ -144,6 +159,7 @@ launch_streamlit_app()
 ## 🔍 Validation & Testing
 
 ### **Functionality Validation**
+
 - ✅ **Privacy Interface**: Black-box access confirmed
 - ✅ **Credit Risk Module**: Predictions and explanations validated
 - ✅ **Compliance Engine**: Adverse action notices generated successfully
@@ -151,6 +167,7 @@ launch_streamlit_app()
 - ✅ **Dynamic Support**: Compatible with various ML models and datasets
 
 ### **Performance Metrics**
+
 - **Explanation Generation**: < 5 seconds for typical credit applications
 - **Memory Usage**: < 500MB for standard operations
 - **Model Compatibility**: Tested with Random Forest, Gradient Boosting, Logistic Regression
@@ -159,12 +176,14 @@ launch_streamlit_app()
 ## 🚧 Known Limitations
 
 ### **Current Scope**
+
 - **Domain Focus**: Primarily designed for credit risk (extensible architecture for future domains)
 - **Model Support**: Optimized for scikit-learn compatible models
 - **LLM Dependency**: Natural language explanations require OpenRouter API key
 - **Deployment**: Currently supports single-instance deployment
 
 ### **Future Enhancements** (Planned for v0.2.0)
+
 - ESG scoring module
 - Stress testing explainer
 - Multi-model ensemble support
@@ -174,12 +193,14 @@ launch_streamlit_app()
 ## 🔐 Security Considerations
 
 ### **Privacy Guarantees**
+
 - **Model Protection**: No access to model internals or parameters
 - **Data Protection**: Original training data never exposed during explanations
 - **Synthetic Generation**: All background data artificially generated
 - **Compliance**: GDPR and ECOA requirements met by design
 
 ### **Recommendations**
+
 - Keep API keys secure (use environment variables)
 - Validate input data before processing
 - Regular security audits recommended for production use
@@ -188,6 +209,7 @@ launch_streamlit_app()
 ## 🎓 Educational Use
 
 This v0.1.0-scratch release is specifically designed for:
+
 - **Academic Research**: Studying privacy-preserving XAI in finance
 - **Educational Purposes**: Learning explainable AI concepts
 - **Proof of Concept**: Demonstrating compliant AI explanation systems
@@ -196,12 +218,14 @@ This v0.1.0-scratch release is specifically designed for:
 ## 📈 Roadmap
 
 ### **v0.2.0 (Next Release)**
+
 - ESG scoring explainer module
 - Advanced privacy techniques
 - Multi-model support
 - Performance optimizations
 
 ### **v0.3.0 (Future)**
+
 - Stress testing module
 - Real-time explanation streaming
 - Enterprise deployment features
@@ -212,6 +236,7 @@ This v0.1.0-scratch release is specifically designed for:
 We welcome contributions to XFIN! This scratch release establishes the foundation for community-driven development of privacy-preserving explainable AI tools.
 
 ### **How to Contribute**
+
 1. Fork the repository
 2. Create a feature branch
 3. Implement your enhancement
