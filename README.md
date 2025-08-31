@@ -21,19 +21,15 @@ This library is built for educational and research purposes, allowing users to e
 
 Install XFIN via pip:
 ```
-
 pip install XFIN
-
 ```
 
 For development installation, clone the repository and install dependencies:
 
 ```
-
 git clone https://github.com/dhruvparmar10/XFIN.git
 cd XFIN
 pip install -e .
-
 ```
 
 ### Requirements
@@ -48,7 +44,6 @@ See `requirements.txt` for the full list.
 Here's a basic example to get started with credit risk explanations:
 
 ```
-
 import pandas as pd
 import joblib
 from xfin_xai import CreditRiskModule
@@ -91,7 +86,6 @@ compliance = explainer.generate_adverse_action_notice(explanation)
 print("Prediction Explanation:", explanation)
 print("Recommendations:", recommendations)
 print("Adverse Action Notice:", compliance)
-
 ```
 
 For more details, see the [examples](./examples) directory.
