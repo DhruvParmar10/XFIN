@@ -1,4 +1,3 @@
-```markdown
 # XFIN-XAI: Privacy-Preserving Explainable AI Library for Financial Services
 
 [![PyPI version](https://badge.fury.io/py/xfin-xai.svg)](https://badge.fury.io/py/xfin-xai)
