@@ -20,6 +20,7 @@ This library is built for educational and research purposes, allowing users to e
 ## Installation
 
 Install XFIN via pip:
+
 ```
 pip install xfin-xai
 ```
@@ -115,8 +116,12 @@ For bugs or feature requests, open an issue on GitHub.
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## Acknowledgments
+
 - Major Thanks to Shap and Lime for building great tools.
 - Thanks to the open-source community for tools like setuptools and ReadTheDocs.
 
 For questions, contact [dhruv.jparmar0@gmail.com] or open an issue.
+
+```
+
 ```
