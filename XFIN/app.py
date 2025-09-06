@@ -22,7 +22,7 @@ import pandas as pd
 import joblib
 import numpy as np
 import matplotlib.pyplot as plt
-from XFIN import CreditRiskModule
+from XFIN import CreditRiskModule, ComplianceEngine
 import os
 
 # Set page config
@@ -40,23 +40,14 @@ st.markdown("**Explainable AI for Credit Risk Assessment with Privacy-Preserving
 st.sidebar.header("Configuration")
 
 # File uploads
-model_file = st.sidebar.file_uploader("Upload Model File (.pkl)", type=['pkl'])
+model_file = st.sidebar.file_uploader("Upload Model File (.pl)", type=['pl'])
 data_file = st.sidebar.file_uploader("Upload Dataset (.csv)", type=['csv'])
-
-# Check if files exist in tests folder as fallback
-if not model_file and os.path.exists('tests/credit_approval_model.pl'):
-    st.sidebar.info("Using default model from tests folder")
-    
-if not data_file and os.path.exists('tests/credit_approval_dataset.csv'):
-    st.sidebar.info("Using default dataset from tests folder")
 
 # Load model and data
 @st.cache_data
 def load_model(model_path=None):
     if model_path:
         return joblib.load(model_path)
-    elif os.path.exists('tests/credit_approval_model.pl'):
-        return joblib.load('tests/credit_approval_model.pl')
     else:
         return None
 
@@ -64,8 +55,6 @@ def load_model(model_path=None):
 def load_data(data_path=None):
     if data_path:
         return pd.read_csv(data_path)
-    elif os.path.exists('tests/credit_approval_dataset.csv'):
-        return pd.read_csv('tests/credit_approval_dataset.csv')
     else:
         return None
 
@@ -74,15 +63,15 @@ try:
     if model_file:
         model = joblib.load(model_file)
     else:
-        model = load_model()
+        model = None
     
     if data_file:
         data = pd.read_csv(data_file)
     else:
-        data = load_data()
+        data = None
     
     if model is None or data is None:
-        st.error("Please upload both model and dataset files, or ensure they exist in the tests folder.")
+        st.info("👈 Use the file uploaders in the sidebar to get started")
         st.stop()
     
     # Prepare data - make it dynamic
@@ -223,18 +212,18 @@ with tab2:
 if st.button("🔍 Analyze Application", type="primary"):
     with st.spinner("Analyzing application..."):
         try:
-            # Get explanation
-            explanation = explainer.explain_prediction(sample_encoded)
-            
-            # Get recommendations
-            recommendations = explainer.generate_recommendations(sample_encoded)
+            # Get comprehensive analysis including compliance
+            full_analysis = explainer.full_analysis(sample_encoded)
+            explanation = full_analysis['explanation']
+            recommendations = full_analysis['recommendations']
+            compliance_notice = full_analysis['compliance_notice']
             
             # Display results
             st.header("📋 Analysis Results")
             
             # Prediction result
             prediction = explanation['prediction'][0] if hasattr(explanation['prediction'], '__len__') else explanation['prediction']
-            
+            st.markdown("---")
             col1, col2 = st.columns([1, 3])
             
             with col1:
@@ -246,16 +235,23 @@ if st.button("🔍 Analyze Application", type="primary"):
             with col2:
                 # Prediction probability if available
                 try:
-                    proba = bank_model.predict_proba(sample_encoded)[0]
+                    proba = universal_model.predict_proba(sample_encoded)[0]
                     st.metric("Approval Probability", f"{{proba[1]:.2%}}")
                 except:
                     pass
             
-            # Create three columns for visualizations
-            col1, col2, col3 = st.columns([1, 1, 1])
+            # Show compliance notice for rejected applications
+            if prediction == 0:  # Rejected
+                st.warning("⚖️ **Regulatory Compliance Notice**")
+                st.text(compliance_notice)
+                st.info("💡 This notice is generated in compliance with ECOA and GDPR regulations.")
+                st.markdown("---")
+            
+            # Create two columns for visualizations
+            col1, col2 = st.columns([1, 1])
             
             with col1:
-                st.subheader("🎯 SHAP Analysis")
+                st.subheader("SHAP Analysis")
                 shap_fig = explainer.create_shap_plot(sample_encoded, explanation)
                 if shap_fig:
                     st.pyplot(shap_fig)
@@ -269,7 +265,7 @@ if st.button("🔍 Analyze Application", type="primary"):
                     st.write(f"{{direction}} {{feature}}: {{value:.3f}}")
             
             with col2:
-                st.subheader("🔍 LIME Analysis")
+                st.subheader("LIME Analysis")
                 lime_fig = explainer.create_lime_plot(explanation)
                 if lime_fig:
                     st.pyplot(lime_fig)
@@ -282,9 +278,10 @@ if st.button("🔍 Analyze Application", type="primary"):
                     direction = "🔴" if value < 0 else "🟢"
                     st.write(f"{{direction}} {{feature}}: {{value:.3f}}")
             
-            with col3:
-                st.subheader("🤖 AI Explanation")
-                st.write(recommendations)
+            st.markdown("---")
+
+            st.subheader("🤖 AI Explanation")
+            st.markdown(recommendations)
         
         except Exception as e:
             st.error(f"Error during analysis: {{str(e)}}")

@@ -3,31 +3,30 @@ from setuptools import setup, find_packages
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
+#Shit! Bhangale forgot to remove the AI comments
 setup(
     name='xfin-xai',
-    version='0.1.0',
+    version='0.1.1',
     author='Rishabh Bhangale & Dhruv Parmar',
-    author_email='dhruv.jparmar0@gmail.com',  # Add your email if desired
-    description='Privacy-Preserving Explainable AI Library for Financial Services',
+    author_email='dhruv.jparmar0@gmail.com', 
+    description='Privacy-Preserving Explainable AI Library for Financial Services and Banking Systems',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/dhruvparmar10/XFIN",  # Update with your actual repo URL
+    url="https://github.com/dhruvparmar10/XFIN", 
     packages=find_packages(),
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
         "Intended Audience :: Financial and Insurance Industry",
         "Intended Audience :: Science/Research",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
         "Topic :: Office/Business :: Financial",
         "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.9",
     install_requires=[
         'streamlit', 
         'pandas', 

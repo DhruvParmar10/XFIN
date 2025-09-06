@@ -11,12 +11,8 @@ class PrivacyPreservingExplainer:
         self.compliance_level = compliance_level
 
     def explain_prediction(self, sample):
-        # Get prediction
         prediction = self.model.predict(sample)
         
-        # SHAP (using KernelExplainer for black-box)
-        # Create background data for SHAP using sample variations
-        np.random.seed(42)
         background_data = np.repeat(sample.values, 50, axis=0)
         for i in range(len(sample.columns)):
             col_mean = sample.values[0, i]
@@ -49,8 +45,7 @@ class PrivacyPreservingExplainer:
         # LIME
         # Create a more realistic background dataset for LIME
         # Use multiple variations of the input to create better training data
-        np.random.seed(42)
-        
+    
         # Create synthetic background data based on the sample
         n_background = 500
         background_samples = []
