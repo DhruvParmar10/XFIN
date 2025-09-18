@@ -47,6 +47,11 @@ setup(
         ],
     },
     keywords='explainable-ai, finance, privacy, machine-learning, credit-risk, compliance',
+    entry_points={
+        'console_scripts': [
+            'xfin=XFIN.cli:xfin_cli' # Legacy support
+        ],
+    },
     project_urls={
         "Bug Reports": "https://github.com/dhruvparmar10/XFIN/issues",
         "Source": "https://github.com/dhruvparmar10/XFIN",
