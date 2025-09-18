@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 #Shit! Bhangale forgot to remove the AI comments
 setup(
     name='xfin-xai',
-    version='0.1.1',
+    version='0.1.2',
     author='Rishabh Bhangale & Dhruv Parmar',
     author_email='dhruv.jparmar0@gmail.com', 
     description='Privacy-Preserving Explainable AI Library for Financial Services and Banking Systems',
