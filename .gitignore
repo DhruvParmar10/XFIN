@@ -1,0 +1,66 @@
+# Environment files with API keys
+.env
+XFIN/.env
+*.env
+
+# Virtual environments
+.venv
+venv/
+env/
+
+# Development directories
+tests/
+docs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Feature cache (market data snapshots)
+XFIN/feature_cache/*.json
+!XFIN/feature_cache/.gitkeep
+
+# Model artifacts (if large or frequently retrained)
+XFIN/models/artifacts/models/*.joblib
+XFIN/models/processed/*.npz
+
+# Large training data (optional - if you want to exclude)
+# XFIN/models/esg_india.csv
+
+# User-specific configs
+.xfin/
+xfin_config.json
+
+# Test outputs
+test_*.py
+out/
+*.png
+*.jpg
+
+# Data files that may contain sensitive portfolio info
+portfolio_*.csv
+holdings_*.csv
