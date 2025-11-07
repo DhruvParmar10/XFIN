@@ -1,0 +1,402 @@
+# Environment files with API keys
+.env
+XFIN/.env
+*.env
+
+# Virtual environments
+.venv
+venv/
+env/
+
+# Development directories
+tests/
+docs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Cache directories
+cache/
+.cache/
+*_cache/
+*/cache/
+**/cache/
+
+# Feature cache directories
+feature_cache/
+features_cache/
+**/feature_cache/
+**/features_cache/
+
+# Market data cache
+market_cache/
+market_data_cache/
+**/market_cache/
+**/market_data_cache/
+
+# ESG data cache
+esg_cache/
+**/esg_cache/
+
+# API response cache
+api_cache/
+**/api_cache/
+
+# Downloaded data cache
+downloads_cache/
+**/downloads_cache/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Feature cache (market data snapshots)
+XFIN/feature_cache/*.json
+XFIN/feature_cache/*.pkl
+XFIN/feature_cache/*.csv
+!XFIN/feature_cache/.gitkeep
+
+# Specific cache files
+*.cache
+.cache.*
+
+# Model artifacts (if large or frequently retrained)
+XFIN/models/artifacts/models/*.joblib
+XFIN/models/processed/*.npz
+
+# Large training data (optional - if you want to exclude)
+# XFIN/models/esg_india.csv
+
+# User-specific configs
+.xfin/
+xfin_config.json
+
+# Test outputs
+test_*.py
+out/
+*.png
+*.jpg
+
+# Data files that may contain sensitive portfolio info
+portfolio_*.csv
+holdings_*.csv
+*_portfolio.csv
+*_holdings.csv
+statement.csv
+*_Statement_*.csv
+*Statement*.csv
+
+# Example data files (real user data)
+examples/*.csv
+examples/DHURV.csv
+examples/port*.csv
+examples/statement.csv
+examples/agts-*.csv
+examples/DEFAULT_*.csv
+examples/Stocks_Holdings_*.csv
+
+# Keep only example template
+!examples/example_portfolio.csv
+
+# Sensitive configuration files
+config.json
+config.yaml
+config.yml
+secrets.json
+credentials.json
+api_keys.json
+*_secrets.*
+*_credentials.*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# pytest
+.pytest_cache/
+.tox/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# Professional Python ignores
+*.so
+*.egg
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.nox/
+.hypothesis/
+pytestdebug.log
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff (if applicable):
+local_settings.py
+db.sqlite3-journal
+
+# Flask stuff (if applicable):
+instance/
+.webassets-cache
+
+# Scrapy stuff (if applicable):
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+docs/.doctrees/
+
+# PyBuilder
+target/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Environments
+.env.local
+.env.*.local
+ENV/
+env.bak/
+venv.bak/
+
+# Mac OS
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# VSCode
+.vscode/
+*.code-workspace
+.history/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Emacs
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+
+# Large data files (uncomment if needed)
+# *.csv
+# *.parquet
+# *.feather
+# *.h5
+# *.hdf5
+
+# Model checkpoints (uncomment if very large)
+# *.pth
+# *.ckpt
+# *.h5
+# *.pb
+
+# Streamlit
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# Environment files with API keys
+.env
+*.env
+
+# Virtual environments
+.venv
+venv/
+env/
+
+# Development directories
+tests/
+docs/
+
+# Cache directories
+cache/
+.cache/
+*_cache/
+__pycache__/
+
+# Python cache
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Feature cache (market data snapshots)
+feature_cache/
+!feature_cache/.gitkeep
+feature_cache/*.json
+feature_cache/*.pkl
+feature_cache/*.csv
+
+# Data directories
+data/
+!data/.gitkeep
+data/*.db
+data/*.csv
+data/*.json
+
+# Model artifacts
+models/artifacts/models/*.joblib
+models/artifacts/models/*.txt
+!models/artifacts/models/.gitkeep
+
+# Processed data
+models/processed/*.npz
+models/processed/X_*.csv
+!models/processed/.gitkeep
+
+# Training data
+models/esg_india.csv
+
+# Large training data (optional - if you want to exclude)
+# XFIN/models/esg_india.csv
+
+# User-specific configs
+.xfin/
+xfin_config.json
+
+# Test outputs
+test_*.py
+out/
+*.png
+*.jpg
+
+# Data files that may contain sensitive portfolio info
+portfolio_*.csv
+holdings_*.csv
