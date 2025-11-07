@@ -1,0 +1,55 @@
+{
+  "raw_input_columns": [
+    "marketCap",
+    "trailingPE",
+    "beta",
+    "vol_30d",
+    "ret_1m",
+    "environment_score",
+    "social_score",
+    "governance_score",
+    "sector"
+  ],
+  "numeric_cols": [
+    "marketCap",
+    "trailingPE",
+    "beta",
+    "vol_30d",
+    "ret_1m",
+    "environment_score",
+    "social_score",
+    "governance_score",
+    "marketCap_log"
+  ],
+  "categorical_cols": [
+    "sector"
+  ],
+  "feature_names": [
+    "marketCap",
+    "trailingPE",
+    "beta",
+    "vol_30d",
+    "ret_1m",
+    "environment_score",
+    "social_score",
+    "governance_score",
+    "marketCap_log",
+    "sector_Basic Materials",
+    "sector_Communication Services",
+    "sector_Consumer Cyclical",
+    "sector_Consumer Defensive",
+    "sector_Energy",
+    "sector_Financial Services",
+    "sector_Healthcare",
+    "sector_Industrials",
+    "sector_Real Estate",
+    "sector_Technology",
+    "sector_Utilities",
+    "sector___UNKNOWN__"
+  ],
+  "label_col": "total_esg",
+  "drop_imputed": false,
+  "imputed_weight": 0.4,
+  "n_total_loaded": 2187,
+  "n_after_filter": 2187
+}
